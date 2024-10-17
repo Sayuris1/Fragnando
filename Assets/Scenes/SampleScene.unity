@@ -351,11 +351,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _altitudeMode: 3
   _altitudeOffset: 0
---- !u!23 &1436707254 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5182500758242582564, guid: b2b6d40ff4556f44fbd1ad1d2f9f47e9, type: 3}
-  m_PrefabInstance: {fileID: 252303957}
-  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1237942443
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3115039148619797750, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_Name
+      value: GoogleSheetsBaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590258691399365594, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac376445098cdcc4b8e4a143a9da4e48, type: 3}
 --- !u!1 &1458997866
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +423,6 @@ GameObject:
   - component: {fileID: 1458997869}
   - component: {fileID: 1458997868}
   - component: {fileID: 1458997873}
-  - component: {fileID: 1458997874}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -592,34 +643,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HumanSegmentationStencilMode: 0
   m_HumanSegmentationDepthMode: 0
-  m_EnvironmentDepthMode: 1
+  m_EnvironmentDepthMode: 3
   m_EnvironmentDepthTemporalSmoothing: 1
   m_OcclusionPreferenceMode: 0
---- !u!114 &1458997874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458997866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aa8f461d05f45f68d7b81ed08f1f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetFrameRate: 20
-  _optimalOcclusionDistanceMode: 1
-  _preferSmoothEdges: 0
-  _principalOccludee: {fileID: 1436707254}
-  _isOcclusionStabilizationEnabled: 0
-  _isOcclusionSuppressionEnabled: 0
-  _suppressionChannels: []
-  _useCustomBackgroundMaterial: 0
-  _customBackgroundMaterial: {fileID: 0}
-  _bypassOcclusionManagerUpdates: 0
-  _overrideOcclusionManagerSettings: 1
-  _semanticSegmentationManager: {fileID: 0}
-  _meshManager: {fileID: 0}
 --- !u!1 &1989127751
 GameObject:
   m_ObjectHideFlags: 0
