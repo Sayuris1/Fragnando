@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using Cathei.BakingSheet;
-using Cathei.BakingSheet.Unity;
 using Niantic.Lightship.AR.WorldPositioning;
 using UnityEngine;
 
@@ -31,7 +29,7 @@ public class GoogleSheetsBaker : MonoBehaviour
         var sheetContainer = new SheetContainer();
 
         // bake sheets from google converter
-        await sheetContainer.Bake(new GoogleSheetConverter(_sheetID, _googleCredential));
+        await sheetContainer.Bake(new Cathei.BakingSheet.GoogleSheetConverter(_sheetID, _googleCredential));
 
         foreach (WPSObject createdObj in _createdObjects)
             Destroy(createdObj.gameObject);
