@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96fe94adc4c5400a8e1eb762bc1bbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _altitudeMode: 3
+  _altitudeMode: 0
   _altitudeOffset: 0
 --- !u!1001 &1237942443
 PrefabInstance:

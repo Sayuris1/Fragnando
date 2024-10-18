@@ -9,18 +9,13 @@ public class GoogleSheetsBaker : MonoBehaviour
     public GameObject CreatePrefab;
 
     private static readonly string _sheetID = "1GdLLxtKPpudC-sWthOs0QJQGNbCUi5UHQozi7rhjnuA";
-    private static readonly string _googleCredential = File.ReadAllText("C:/Users/Admin/Desktop/Cred.json");
+    //private static readonly string _googleCredential = File.ReadAllText("C:/Users/Admin/Desktop/Cred.json");
+    private static readonly string _googleCredential = @"{}";
     private List<WPSObject> _createdObjects = new();
 
     private async void Start()
     {
         await PullDataFromSheet();
-    }
-
-    private void Update()
-    {
-        var helper = Camera.main.GetComponent<ARWorldPositioningCameraHelper>();
-        DebugUI.Instance.AddOrUpdateDebug("Cam", $"Cam: Latitude: {helper.Latitude}, Longitude: {helper.Longitude}, Altitude: {helper.Altitude}");
     }
 
     public async Task PullDataFromSheet()

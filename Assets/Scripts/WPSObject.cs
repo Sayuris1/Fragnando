@@ -24,7 +24,7 @@ public class WPSObject : MonoBehaviour
     public WPSPosStruct WPSPos;
 
     [SerializeField] 
-    private ARWorldPositioningObjectHelper positioningHelper;
+    private ARWorldPositioningObjectHelper _positioningHelper;
 
     public void Setup(PersonalitySheet.Row row)
     {
@@ -44,20 +44,22 @@ public class WPSObject : MonoBehaviour
     {
         yield return new WaitUntil(() => Camera.main.gameObject.GetComponentInParent<ARWorldPositioningObjectHelper>() != null);
 
-        positioningHelper = Camera.main.gameObject.GetComponentInParent<ARWorldPositioningObjectHelper>();
-        positioningHelper.AddOrUpdateObject(gameObject, WPSPos.LA, WPSPos.LO, WPSPos.ALT, Quaternion.identity);
+        _positioningHelper = Camera.main.gameObject.GetComponentInParent<ARWorldPositioningObjectHelper>();
+        _positioningHelper.AddOrUpdateObject(gameObject, WPSPos.LA, WPSPos.LO, WPSPos.ALT, Quaternion.identity);
     }
 
     private void Update()
     {
+        if(_positioningHelper == null)
+            return;
+
         transform.LookAt(Camera.main.transform, transform.up);
 
         // Z rot always 0
         Vector3 currentRot = transform.rotation.eulerAngles;
         transform.rotation = Quaternion.Euler(currentRot.x, currentRot.y, 0);
 
-        var helper = Camera.main.GetComponent<ARWorldPositioningCameraHelper>();
-        DebugUI.Instance.AddOrUpdateDebug(gameObject.name, $"{gameObject.name}: Latitude: {helper.Latitude}, Longitude: {helper.Longitude}, Altitude: {helper.Altitude}");
+        DebugUI.Instance.AddOrUpdateDebug(gameObject.name, $"{gameObject.name}:\n Latitude: {WPSPos.LA}\n Longitude: {WPSPos.LO}\n Altitude: {WPSPos.ALT}");
     }
 
     private void OnDestroy()
