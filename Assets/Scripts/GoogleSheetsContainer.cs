@@ -20,5 +20,5 @@ public class SheetContainer : SheetContainerBase
 {
     public SheetContainer() : base(UnityLogger.Default) {}
 
-    public PersonalitySheet PersonalitySheet { get; private set; }
+    public PersonalitySheet PersonalitySheetV2 { get; private set; }
 }

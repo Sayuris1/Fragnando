@@ -229,7 +229,7 @@ MonoBehaviour:
     LA: 0
     LO: 0
     ALT: 0
-  positioningHelper: {fileID: 0}
+  _positioningHelper: {fileID: 0}
 --- !u!1001 &4745321795301651104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,6 +301,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeechBubble_02
       objectReference: {fileID: 0}
+    - target: {fileID: 2571717152831743122, guid: de6f8606b10463641bc57030654d90bf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 3750962815909427012, guid: de6f8606b10463641bc57030654d90bf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4856739532438411140, guid: de6f8606b10463641bc57030654d90bf, type: 3}
     - target: {fileID: 9019781070870844715, guid: de6f8606b10463641bc57030654d90bf, type: 3}
       propertyPath: m_IsActive
       value: 0

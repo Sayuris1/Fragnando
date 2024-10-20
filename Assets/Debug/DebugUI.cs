@@ -37,7 +37,7 @@ public class DebugUI : MonoBehaviour
         else
             AddOrUpdateDebug("Status", $"Status: null\n GPS Enabled: {Input.compass.enabled}\n GPS Status: {Input.location.status}");
 
-        AddOrUpdateDebug("GPSPos", "GPS Latitude: " + Input.location.lastData.latitude + "\n GPS Longitude: " + Input.location.lastData.longitude);
+        //AddOrUpdateDebug("GPSPos", "GPS Latitude: " + Input.location.lastData.latitude + "\n GPS Longitude: " + Input.location.lastData.longitude);
 
         if(Input.location.status != LocationServiceStatus.Running)
         {

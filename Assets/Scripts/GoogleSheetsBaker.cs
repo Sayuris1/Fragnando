@@ -30,7 +30,7 @@ public class GoogleSheetsBaker : MonoBehaviour
             Destroy(createdObj.gameObject);
         _createdObjects = new();
 
-        foreach (PersonalitySheet.Row row in sheetContainer.PersonalitySheet)
+        foreach (PersonalitySheet.Row row in sheetContainer.PersonalitySheetV2)
         {
             WPSObject newGo = Instantiate(CreatePrefab).GetComponent<WPSObject>();
 

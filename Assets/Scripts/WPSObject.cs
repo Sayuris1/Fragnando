@@ -23,8 +23,8 @@ public class WPSObject : MonoBehaviour
 {
     public WPSPosStruct WPSPos;
 
-    [SerializeField] 
     private ARWorldPositioningObjectHelper _positioningHelper;
+    private ARWorldPositioningCameraHelper _cameraHelper;
 
     public void Setup(PersonalitySheet.Row row)
     {
@@ -43,9 +43,12 @@ public class WPSObject : MonoBehaviour
     private IEnumerator GetPositioningHelper()
     {
         yield return new WaitUntil(() => Camera.main.gameObject.GetComponentInParent<ARWorldPositioningObjectHelper>() != null);
+        yield return new WaitUntil(() => Camera.main.gameObject.GetComponent<ARWorldPositioningCameraHelper>() != null);
 
         _positioningHelper = Camera.main.gameObject.GetComponentInParent<ARWorldPositioningObjectHelper>();
-        _positioningHelper.AddOrUpdateObject(gameObject, WPSPos.LA, WPSPos.LO, WPSPos.ALT, Quaternion.identity);
+        _cameraHelper = Camera.main.gameObject.GetComponent<ARWorldPositioningCameraHelper>();
+
+        SetWPSPosAndRot();
     }
 
     private void Update()
@@ -65,5 +68,10 @@ public class WPSObject : MonoBehaviour
     private void OnDestroy()
     {
         DebugUI.Instance.RemoveFromDebug(gameObject.name);
+    }
+
+    private void SetWPSPosAndRot()
+    {
+        _positioningHelper.AddOrUpdateObject(gameObject, WPSPos.LA, WPSPos.LO, WPSPos.ALT, Quaternion.identity);
     }
 }
